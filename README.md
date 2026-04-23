@@ -1,2 +1,50 @@
-# my-love
-no olvides lo mucho que te amo mi rey
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor 💖</title>
+    <style>
+        body { font-family: 'Georgia', serif; background: linear-gradient(to right, #ffe0ec, #fff); text-align: center; margin: 0; padding: 0; }
+        .carta { background: white; max-width: 500px; margin: 40px auto; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        h1 { color: #e91e63; font-size: 1.8em; }
+        p { font-size: 1.1em; color: #444; line-height: 1.6; }
+        .heart { font-size: 60px; animation: latido 1.5s infinite; }
+        @keyframes latido { 0% {transform: scale(1);} 50% {transform: scale(1.2);} 100% {transform: scale(1);} }
+        iframe { width: 100%; height: 250px; border-radius: 10px; border: none; margin-top: 20px; }
+        .btn { margin-top: 15px; padding: 12px 25px; background: #e91e63; color: white; border: none; border-radius: 10px; cursor: pointer; font-size: 1em; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="carta">
+        <h1>Para mi amor eterno 💕</h1>
+        <p>
+            Mi amor,<br><br>
+            Desde que llegaste a mi vida, todo es más bonito, más especial… más tú.
+            Gracias por existir y por hacerme tan feliz.<br><br>
+            Te amo hoy, mañana y siempre. ❤️
+        </p>
+
+        <div class="heart">💖</div>
+
+        <iframe 
+            id="video"
+            src="https://www.youtube.com/embed/F7q3P7-j4vU?autoplay=1&mute=1&enablejsapi=1" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+
+        <br>
+        <button class="btn" onclick="activarSonido()">🔊 Toca para escuchar la música</button>
+    </div>
+
+    <script>
+        function activarSonido() {
+            var iframe = document.getElementById("video");
+            iframe.src = "https://www.youtube.com/embed/F7q3P7-j4vU?autoplay=1&mute=0";
+        }
+    </script>
+
+</body>
+</html>
