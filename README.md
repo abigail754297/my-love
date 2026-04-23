@@ -11,7 +11,9 @@
         p { font-size: 1.1em; color: #444; line-height: 1.6; }
         .heart { font-size: 60px; animation: latido 1.5s infinite; }
         @keyframes latido { 0% {transform: scale(1);} 50% {transform: scale(1.2);} 100% {transform: scale(1);} }
-        iframe { width: 100%; height: 250px; border-radius: 10px; border: none; margin-top: 20px; }
+        /* Contenedor para que el video se vea bien en celular */
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-top: 20px; border-radius: 10px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
         .btn { margin-top: 15px; padding: 12px 25px; background: #e91e63; color: white; border: none; border-radius: 10px; cursor: pointer; font-size: 1em; font-weight: bold; }
     </style>
 </head>
@@ -28,21 +30,24 @@
 
         <div class="heart">💖</div>
 
-        <iframe 
-            id="video"
-            src="https://www.youtube.com/embed/F7q3P7-j4vU?autoplay=1&mute=1&enablejsapi=1" 
-            allow="autoplay; encrypted-media" 
-            allowfullscreen>
-        </iframe>
+        <div class="video-container">
+            <iframe 
+                id="video"
+                src="https://www.youtube.com/embed/G5tlJnxFJF8?autoplay=1&mute=1&enablejsapi=1" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+            </iframe>
+        </div>
 
         <br>
-        <button class="btn" onclick="activarSonido()">🔊 Toca para escuchar la música</button>
+        <button class="btn" onclick="activarSonido()">🔊 Toca para escuchar nuestra canción</button>
     </div>
 
     <script>
         function activarSonido() {
             var iframe = document.getElementById("video");
-            iframe.src = "https://www.youtube.com/embed/F7q3P7-j4vU?autoplay=1&mute=0";
+            // Al hacer clic, recargamos el video con sonido (mute=0)
+            iframe.src = "https://www.youtube.com/embed/G5tlJnxFJF8?autoplay=1&mute=0";
         }
     </script>
 
